@@ -11,6 +11,7 @@ public class Parabola : MonoBehaviour
 	public float FocusToDirectriseDistance = 2;
 
 	public double stepValues = 10;
+	public double biasCount = 4;
 
 	public Vector3 center = new Vector3(1, 1, 1);
 	
@@ -35,33 +36,20 @@ public class Parabola : MonoBehaviour
 		{
 			float x = i;
 
-			double y = Math.Sqrt(-2 * FocusToDirectriseDistance * x);
+			double bias = 1 / biasCount;
 
-			Gizmos.DrawSphere(new Vector3((center.x + x), center.y , ((float) y) + center.z), 0.1f);
-			Gizmos.DrawSphere(new Vector3((center.x + x), center.y , (-(float) y) + center.z), 0.1f);
-			
-			points.Add(new Vector3((center.x + x), center.y , ((float) y) + center.z));
-			negativePoints.Add(new Vector3((center.x + x), center.y , (-(float) y) + center.z));
+			for (int j = 0; j < biasCount; j++)
+			{
+				if(j != 0)
+					x += (float) bias;
+				double y = Math.Sqrt(-2 * FocusToDirectriseDistance * x);
 
-			x = x + 0.25f;
+				Gizmos.DrawSphere(new Vector3((center.x + x), center.y , ((float) y) + center.z), 0.1f);
+				Gizmos.DrawSphere(new Vector3((center.x + x), center.y , (-(float) y) + center.z), 0.1f);
 			
-			double newY = Math.Sqrt(-2 * FocusToDirectriseDistance * x);
-
-			Gizmos.DrawSphere(new Vector3((center.x + x), center.y , ((float) newY) + center.z), 0.1f);
-			Gizmos.DrawSphere(new Vector3((center.x + x), center.y , (-(float) newY) + center.z), 0.1f);
-			
-			points.Add(new Vector3((center.x + x), center.y , ((float) newY) + center.z));
-			negativePoints.Add(new Vector3((center.x + x), center.y , (-(float) newY) + center.z));
-			
-			x += 0.25f;
-			
-			double newYn = Math.Sqrt(-2 * FocusToDirectriseDistance * x);
-
-			Gizmos.DrawSphere(new Vector3((center.x + x), center.y , ((float) newYn) + center.z), 0.1f);
-			Gizmos.DrawSphere(new Vector3((center.x + x), center.y , (-(float) newYn) + center.z), 0.1f);
-			
-			points.Add(new Vector3((center.x + x), center.y , ((float) newYn) + center.z));
-			negativePoints.Add(new Vector3((center.x + x), center.y , (-(float) newYn) + center.z));
+				points.Add(new Vector3((center.x + x), center.y , ((float) y) + center.z));
+				negativePoints.Add(new Vector3((center.x + x), center.y , (-(float) y) + center.z));
+			}
 		}
 
 		for (int i = 0; i < points.Count - 1; i++)
