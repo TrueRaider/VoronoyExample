@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\User\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\User\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_TestProject.1305907445.00" t="ExcludeRecursive" />
+    <e p="D:\Unity projects\TestProject" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets\BotConroller.cs" t="Include" />
+      <e p="Assets\NavMeshPoints.cs" t="Include" />
+      <e p="Assets\Scripts" t="Include">
+        <e p="DerivedMapControl.cs" t="Include" />
+        <e p="DirectionRandom.cs" t="Include" />
+        <e p="DirectionTarget.cs" t="Include" />
+        <e p="Directrise.cs" t="Include" />
+        <e p="GridDisplay.cs" t="Include" />
+        <e p="InfluenceMap.cs" t="Include" />
+        <e p="InfluenceMapControl.cs" t="Include" />
+        <e p="InfluenceObstacle.cs" t="Include" />
+        <e p="InfluencePropagator.cs" t="Include" />
+        <e p="MapManager.cs" t="Include" />
+        <e p="Mover.cs" t="Include" />
+        <e p="Parabola.cs" t="Include" />
+        <e p="Test.cs" t="Include" />
+        <e p="Thread Ninja" t="Include">
+          <e p="Plugins" t="Include">
+            <e p="Ninja.cs" t="Include" />
+            <e p="Task.cs" t="Include" />
+            <e p="TaskState.cs" t="Include" />
+            <e p="ThreadNinjaMonoBehaviourExtensions.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Assets\Shaders" t="Include">
+        <e p="VertexUnlit.shader" t="Include" />
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="TestProject.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>
